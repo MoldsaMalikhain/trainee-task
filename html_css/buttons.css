@@ -1,0 +1,54 @@
+body {
+  background-color: gainsboro;
+  text-align: center;
+}
+.button_container {
+  border-radius: 4px;
+  box-shadow: grey 0 0 10px;
+  padding: 1rem;
+  width: 30rem;
+  height: 30rem;
+  background-color: grey;
+  margin: auto;
+  display: block;
+}
+.button {
+  margin: auto;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: 4px;
+}
+.button_active {
+  transition-duration: 0.1s;
+  background-color: rgb(180, 180, 180);
+}
+.button_active:hover {
+  border-radius: 4px;
+  background-color: rgb(218, 218, 218);
+}
+.button_active:active {
+  border-radius: 4px;
+  background-color: rgb(87, 87, 87);
+  border-color: gray;
+}
+.button_disabled {
+  background-color: rgb(180, 180, 180);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.button_danger {
+  transition-duration: 0.1s;
+  background-color: rgb(171, 13, 13);
+  border-color: rgb(255, 86, 86);
+}
+.button_danger:hover {
+  border-radius: 4px;
+  background-color: rgb(218, 62, 62);
+  border-color: rgb(255, 119, 119);
+}
+.button_danger:active {
+  border-radius: 4px;
+  background-color: rgb(171, 13, 13);
+  border-color: rgb(179, 61, 61);
+}

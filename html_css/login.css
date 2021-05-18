@@ -1,0 +1,26 @@
+body {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login_container {
+  margin: auto;
+  margin-top: 40vmin;
+  margin-bottom: 40vmin;
+  background-color: gray;
+  width: 21rem;
+  height: 7rem;
+  box-shadow: gray 0 0 10px;
+  border-radius: 4px;
+}
+.login_form {
+  display: block;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(177, 177, 177);
+  box-shadow: rgb(65, 65, 65) 0px 0 10px;
+}
+#em {
+  margin-left: 1.9rem;
+}

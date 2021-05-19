@@ -66,15 +66,25 @@
         Создаем файл с помощью редактора и тут же изменяем файл
 
 ## GIT
+>Задача
+        
+        Внести изменения в ветке dev репозитория git@example.com:example/test.git,
+        добавив в корень файл Readme.md с текстом 
+        ### May be in future и залить их на удаленный репозиторий. 
+        Напишите набор команд для решения этой задачи с коментариями.
 
-The minimum requirement by Yii is that your Web server supports
-PHP 5.1.0 or above. Yii has been tested with Apache HTTP server
-on Windows and Linux operating systems.
+>Выполнение
 
-Please access the following URL to check if your Web server reaches
-the requirements by Yii, assuming "YiiPath" is where Yii is installed:
+        Для начала клонируем репозиторий, после чего переключаемся на ветку 'dev'
+        Далее делаем правки, добавляем файл и редактируем его
+        И под конец делаем коммит
 
-      http://hostname/YiiPath/requirements/index.php
+>Комманды
+
+        git clone ssh://git@example.com:example/test.git
+        git checkout dev
+        git commit -a -m 'Readme Update'
+        git push
 
 ## CSS/HTML
 >1. Опишите все известные вам способы позиционирования 5 элементов по центру, каждый из которых должен занимать 20%.

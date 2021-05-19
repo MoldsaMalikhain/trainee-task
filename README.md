@@ -5,7 +5,7 @@
 > Мои контакты :
 
     +380660343400
-    kerch999@gmail.com
+    roman.sh.tr@gmail.com
 
 ## Linux навигация и поиск
 
@@ -48,6 +48,7 @@
         o-rwx: другие пользователи         - забираем все права
 
 >5. ln -s ../../logs/access.log access.log_soft.log
+    
     Создаем символическую ссылку
 
 >6. ls -R -a / tree -a

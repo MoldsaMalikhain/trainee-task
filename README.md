@@ -121,3 +121,156 @@ http://www.yiiframework.com
 
 
 ## Mongo
+
+>Коллекция posts
+
+        {
+                "properties": {
+                        "_id": { "bsonType": "objectId" },
+                        "title": { "bsonType": "string" },
+                        "content": { "bsonType": "string" },
+                        "author": { "bsonType": "string" },
+                        "like": { "bsonType": "int" },
+                        "dislike": { "bsonType": "int" }
+                }
+        }
+
+>Тестовые данный что я использовал
+
+        db.posts.insertMany([
+                {
+                        properties:{
+                                title:  "First post",
+                                content: "Some kind of content that will be copied",
+                                author: "Randall Gill",
+                                like: 1000,
+                                dislike: 30
+                        }   
+                },
+                {
+                        properties:{
+                                title:  "Second post",
+                                content: "Some kind of content that will be copied",
+                                author: "Blaze Tickner",
+                                like: 10,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Thrid post",
+                                content: "Some kind of content that will be copied",
+                                author: "Ron Cook",
+                                like: 1,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Fourth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Richard Chambers",
+                                like: 1000,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Fifth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Puck Lambert",
+                                like: 101,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Sixth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Hugo Crawford",
+                                like: 35,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Seventh post",
+                                content: "Some kind of content that will be copied",
+                                author: "Blaise Reynolds",
+                                like: 1000,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Eighth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Otto Moore",
+                                like: 10,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Ninth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Merlin Cooke",
+                                like: 10,
+                                dislike: 30
+                        }
+                },
+                {
+                        properties:{
+                                title:  "Tenth post",
+                                content: "Some kind of content that will be copied",
+                                author: "Lindan",
+                                like: 100,
+                                dislike: 30
+                        }
+                }
+        ])
+
+>Данный для ввода 
+
+        {
+                properties:{
+                        title:  "Eleventh post",
+                        content: "Some kind of content that will be copied",
+                        author: "Gwydion Greenwood",
+                        like: 325,
+                        dislike: 30
+                }   
+        },
+
+>1. Выведите 5 записей из коллекции posts пропустив первые 5
+
+        Выводим каталог, пропускаем первые 5 элементов и ограничиваем вывод до 5ти элементов
+
+        db.posts.find({}).skip(5).limit(5)
+
+>2. Выведите все записи у которых like больше 100
+
+        Выводим все элементы у которых like > 100
+
+        db.posts.find({"properties.like": {$gt: 100}})
+
+>3. Добавьте новую запись в коллекцию posts
+
+        Добавляем документ в коллекцию posts
+
+        db.posts.insertOne({...}) //данные для ввода указаны выше
+
+>4. Выведите список авторов и их общее количество like
+
+        Выводим список авторов и их лайки
+
+        db.posts.find({}, {"_id": 0, "properties.title": 0, "properties.dislike": 0, "properties.content": 0,})
+
+        выводим список авторов и их общее количество лайков
+
+        db.post.aggregate([{
+                $group:{
+                        _id:{author:"$properties.author"},
+                        like:{$sum:"$properties.like"}
+                }
+        }])

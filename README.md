@@ -76,23 +76,24 @@ the requirements by Yii, assuming "YiiPath" is where Yii is installed:
       http://hostname/YiiPath/requirements/index.php
 
 ## CSS/HTML
+>1. Опишите все известные вам способы позиционирования 5 элементов по центру, каждый из которых должен занимать 20%.
 
-Yii comes with a command line tool called "yiic" that can create
-a skeleton Yii application for you to start with.
+>2. Опишите все известные вам способы позиционирования модального окна, по центру экрана
+        
+        1. Если мы знаем размеры модельного окна то мы можем расположить его по центру с помощью margin-left, margin-top
+        2. Так же можем разместить с помощью transform: translate(50%,50%)
+        3. Более интересный варинт использовать display: inline-block, поскольку очень легко центровать по-горизонтали преждевременно добавив text-align: center на родительском елементе.
+        Если к тому же елементу добавить свойство vertical-align: middle, то елементы будут центроваться по вертикали друг относительно друга. Но в этом случае будет необходим псевдоелемент
 
-On command line, type in the following commands:
+>3. Напишите стили для кнопки, которая может иметь несколько состояний: active, disabled, danger. Цвета произвольные.
 
-        $ cd YiiPath/framework                (Linux)
-        cd YiiPath\framework                  (Windows)
+        Неособо понял задачу, и уже думал писать кнопку отдельно как React модуль, дабы менять ее состояния.
+        Стиль кнопки вы можете найти в [./html-css/button.css]
 
-        $ ./yiic webapp ../testdrive          (Linux)
-        yiic webapp ..\testdrive              (Windows)
+>4. Сверстайте страницу логина, которая должна содержать только форму с полями email, password.
 
-The new Yii application will be created at "YiiPath/testdrive".
-You can access it with the following URL:
-
-        http://hostname/YiiPath/testdrive/index.php
-
+        Стиль формы вы можетей найти    [./html-css/login.css]
+        Саму страничку вы можетей найти [./html-css/login.html]
 ## WHAT'S NEXT
 
 Please visit the project website for tutorials, class reference

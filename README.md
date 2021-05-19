@@ -64,6 +64,7 @@
  
         Создаем файл с помощью редактора и тут же изменяем файл
 
+### May be in future
 ## GIT
 
 The minimum requirement by Yii is that your Web server supports
@@ -101,3 +102,6 @@ and join discussions with other Yii users.
 
 The Yii Developer Team
 http://www.yiiframework.com
+
+
+

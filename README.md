@@ -113,11 +113,10 @@
         Саму страничку вы можетей найти [./html-css/login.html]
 ## JS логика
 
-Please visit the project website for tutorials, class reference
-and join discussions with other Yii users.
-
-The Yii Developer Team
-http://www.yiiframework.com
+        Увы смог осилить нормально только 8 задач
+        В 11 через костыли кое как сделал, но так же смутило что не мог создать ассоциативный массив
+        Больше всего намучался с RegExp
+        Задания интересные и некоторые с подвохом
 
 
 ## Mongo
@@ -274,3 +273,8 @@ http://www.yiiframework.com
                         like:{$sum:"$properties.like"}
                 }
         }])
+
+## Итоги
+
+Выполнять задачи было интересно, и проблем в основном не было, больше всего времени потратил на JS, поскольку с ассоциативными массивами дела я еще не имел, а RegExp это злая вещь
+Очень сильно надеюсь что вас удавлетворит данный результат
